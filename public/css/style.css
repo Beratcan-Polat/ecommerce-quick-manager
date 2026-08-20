@@ -1,0 +1,51 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.navbar-brand-custom {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600;
+}
+
+.table th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+}
+
+.badge-stock-in {
+    background-color: #d1fae5;
+    color: #065f46;
+    font-weight: 600;
+}
+
+.badge-stock-out {
+    background-color: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.btn-delete {
+    border: none;
+    background: none;
+    color: #dc3545;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #fee2e2;
+}

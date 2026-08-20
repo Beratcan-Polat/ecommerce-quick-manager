@@ -65,12 +65,12 @@
                                 <select name="category" id="category"
                                         class="form-select @error('category') is-invalid @enderror">
                                     <option value="">-- Kategori Seçin --</option>
-                                    <option value="Elektronik" {{ old('category') == 'Elektronik' ? 'selected' : '' }}>Elektronik</option>
-                                    <option value="Giyim" {{ old('category') == 'Giyim' ? 'selected' : '' }}>Giyim</option>
-                                    <option value="Ev & Yaşam" {{ old('category') == 'Ev & Yaşam' ? 'selected' : '' }}>Ev & Yaşam</option>
-                                    <option value="Spor" {{ old('category') == 'Spor' ? 'selected' : '' }}>Spor</option>
-                                    <option value="Kitap" {{ old('category') == 'Kitap' ? 'selected' : '' }}>Kitap</option>
-                                    <option value="Oyuncak" {{ old('category') == 'Oyuncak' ? 'selected' : '' }}>Oyuncak</option>
+                                    @foreach(App\Models\Product::CATEGORIES as $category)
+                                        <option value="{{ $category }}" {{ old('category') == $category ? 'selected' : '' }}>
+                                            {{ $category }}
+                                        </option>
+                                    @endforeach
+
                                 </select>
                                 @error('category')
                                     <div class="invalid-feedback">{{ $message }}</div>
